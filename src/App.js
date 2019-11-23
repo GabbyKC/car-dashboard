@@ -1,4 +1,7 @@
 import React, {Component} from 'react';
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faPencilAlt, faTrash, faPlus } from "@fortawesome/free-solid-svg-icons";
+
 import './App.css';
 import data from './data';
 
@@ -11,9 +14,11 @@ class App extends Component {
                     <td>{name}</td>
                     <td>{deviceID}</td>
                     <td>{HWKey}</td>
-                    <td>{charge}%</td>
-                    <td>{mileage}</td>
+                    <td>{charge} %</td>
                     <td>{GPS}</td>
+                    <td>{mileage}</td>
+                    <td> <FontAwesomeIcon className='table-icon' icon={faPencilAlt}/></td>
+                    <td> <FontAwesomeIcon className='table-icon' icon={faTrash}/></td>
                 </tr>
             )
         })
@@ -24,7 +29,7 @@ class App extends Component {
             <div className='dashboard-wrapper'>
                 <div className='header'>
                     <div className='brand-name'>Device Simulator Dashboard</div>
-                    <div>add goes here</div>
+                    <div className='add-device'><FontAwesomeIcon icon={faPlus}/> Add Device</div>
                 </div>
 
                 <table>
@@ -34,8 +39,8 @@ class App extends Component {
                         <th>DEVICE ID</th>
                         <th>HW KEY</th>
                         <th>CHARGE</th>
-                        <th>MILEAGE</th>
                         <th>GPS</th>
+                        <th>MILEAGE</th>
                     </tr>
                     </thead>
                     <tbody>

@@ -30,5 +30,37 @@
     "GPS": "Off",
     "ignition": true,
     "LTE": false
+  },
+  {
+    "name": 3,
+    "deviceID": "12345677",
+    "HWKey": "98765432",
+    "charge": 25,
+    "mileage": 250,
+    "distance": 10,
+    "immobilizer": true,
+    "keyInHolder": false,
+    "doors": true,
+    "fuelCard": true,
+    "handbrake": true,
+    "GPS": "Off",
+    "ignition": true,
+    "LTE": false
+  },
+  {
+    "name": 4,
+    "deviceID": "12345677",
+    "HWKey": "98765432",
+    "charge": 25,
+    "mileage": 250,
+    "distance": 10,
+    "immobilizer": true,
+    "keyInHolder": false,
+    "doors": true,
+    "fuelCard": true,
+    "handbrake": true,
+    "GPS": "On",
+    "ignition": true,
+    "LTE": false
   }
 ]

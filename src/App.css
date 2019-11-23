@@ -1,1 +1,49 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat&display=swap');
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    background-color: #f8f8f8;
+}
+
+.dashboard-wrapper {
+    width: 800px;
+    margin: 100px auto;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+.brand-name {
+    font-size: 25px;
+    font-weight: bold;
+}
+
+table {
+    width: 100%;
+    border-spacing: 0 10px;
+}
+
+.table-headings {
+    font-size: 10px;
+    color: grey;
+    text-align: left;
+}
+
+.table-headings th {
+    padding: 0 20px;
+}
+
+.car-info {
+    background-color: white;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+    -webkit-box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+    -moz-box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+}
+
+.car-info td {
+    padding: 20px;
+}
 

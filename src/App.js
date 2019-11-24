@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import {faPencilAlt, faTrash, faPlus} from "@fortawesome/free-solid-svg-icons";
+import DeviceView from "./DeviceView";
 import './App.css';
 // import data from './data';
 
@@ -75,6 +76,10 @@ class App extends Component {
         ]
     };
 
+    noLongerEditing = () => {
+        this.setState({...this.state, currentlyEditing: null});
+    };
+
     renderTableData() {
         return this.state.cars.map((car, index) => {
             const {name, deviceID, HWKey, charge, mileage, GPS} = car;
@@ -101,7 +106,7 @@ class App extends Component {
 
         if (currentlyEditing) {
             return (
-                <div>Ur editing now {currentlyEditing.name}</div>
+                <DeviceView car={this.state.currentlyEditing} goBack={this.noLongerEditing}/>
             )
         }
         return (

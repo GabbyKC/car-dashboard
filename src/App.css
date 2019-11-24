@@ -48,10 +48,23 @@ table {
     -moz-box-shadow: 0 2px 8px rgba(0,0,0,0.2);
 }
 
+.car-info:hover {
+    background-color: #c2efb2;
+}
+
 .car-info td {
     padding: 20px;
 }
 
 .table-icon {
     color: grey;
+}
+
+.update-buttons {
+    display: block;
+    font-size: 12px;
+}
+
+.center {
+    text-align: center;
 }

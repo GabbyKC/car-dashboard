@@ -11,7 +11,7 @@
     "doors": true,
     "fuelCard": true,
     "handbrake": true,
-    "GPS": "On",
+    "GPS": true,
     "ignition": true,
     "LTE": false
   },
@@ -27,7 +27,7 @@
     "doors": true,
     "fuelCard": true,
     "handbrake": true,
-    "GPS": "Off",
+    "GPS": false,
     "ignition": true,
     "LTE": false
   },
@@ -43,7 +43,7 @@
     "doors": true,
     "fuelCard": true,
     "handbrake": true,
-    "GPS": "Off",
+    "GPS": false,
     "ignition": true,
     "LTE": false
   },
@@ -59,7 +59,7 @@
     "doors": true,
     "fuelCard": true,
     "handbrake": true,
-    "GPS": "On",
+    "GPS": true,
     "ignition": true,
     "LTE": false
   }

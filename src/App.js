@@ -7,7 +7,7 @@ import './App.css';
 class App extends Component {
     state = {
         currentlyEditing: null,
-        cars: [
+        devices: [
             {
                 "name": 1,
                 "deviceID": "12345678",
@@ -20,7 +20,7 @@ class App extends Component {
                 "doors": true,
                 "fuelCard": true,
                 "handbrake": true,
-                "GPS": "On",
+                "GPS": true,
                 "ignition": true,
                 "LTE": false,
                 "location": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2427.636431985886!2d13.41102065166224!3d52.52191837971555!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47a84e1edb11286f%3A0x30fc01c366e4166e!2sAlexanderplatz!5e0!3m2!1sen!2sde!4v1574620427024!5m2!1sen!2sde"
@@ -37,7 +37,7 @@ class App extends Component {
                 "doors": true,
                 "fuelCard": true,
                 "handbrake": true,
-                "GPS": "Off",
+                "GPS": false,
                 "ignition": true,
                 "LTE": false,
                 "location": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2427.9483064299807!2d13.375510051662115!3d52.516274579714484!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47a851c655f20989%3A0x26bbfb4e84674c63!2sBrandenburg%20Gate!5e0!3m2!1sen!2sde!4v1574626587136!5m2!1sen!2sde"
@@ -54,7 +54,7 @@ class App extends Component {
                 "doors": true,
                 "fuelCard": true,
                 "handbrake": true,
-                "GPS": "Off",
+                "GPS": false,
                 "ignition": true,
                 "LTE": false,
                 "location": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2427.636431985886!2d13.41102065166224!3d52.52191837971555!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47a84e1edb11286f%3A0x30fc01c366e4166e!2sAlexanderplatz!5e0!3m2!1sen!2sde!4v1574620427024!5m2!1sen!2sde"
@@ -71,7 +71,7 @@ class App extends Component {
                 "doors": true,
                 "fuelCard": true,
                 "handbrake": true,
-                "GPS": "On",
+                "GPS": true,
                 "ignition": true,
                 "LTE": false,
                 "location": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2427.9483064299807!2d13.375510051662115!3d52.516274579714484!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47a851c655f20989%3A0x26bbfb4e84674c63!2sBrandenburg%20Gate!5e0!3m2!1sen!2sde!4v1574626587136!5m2!1sen!2sde"
@@ -87,34 +87,34 @@ class App extends Component {
         console.log('Delete not implemented yet')
     };
 
-    updateCar = (carName, e) => {
+    updateDevice = (DeviceName, e) => {
         const {name, value, type, checked} = e.target;
 
-        let updatedCars = this.state.cars.map(car => (
-            car.name === carName ? {...car, [name]: (type === 'checkbox' ? checked : value)} : car
+        let updatedDevices = this.state.devices.map(device => (
+            device.name === DeviceName ? {...device, [name]: (type === 'checkbox' ? checked : value)} : device
         ));
 
         this.setState({
             ...this.state,
-            cars: updatedCars
+            devices: updatedDevices
         })
     };
 
 
     renderTableData() {
-        return this.state.cars.map((car, index) => {
-            const {name, deviceID, HWKey, charge, mileage, GPS} = car;
+        return this.state.devices.map((device, index) => {
+            const {name, deviceID, HWKey, charge, mileage, GPS} = device;
 
             return (
-                <tr key={index} className='car-info'>
+                <tr key={index} className='device-info'>
                     <td>{name}</td>
                     <td>{deviceID}</td>
                     <td>{HWKey}</td>
                     <td>{charge} %</td>
-                    <td>{GPS}</td>
+                    <td>{GPS ? 'On' : 'Off'}</td>
                     <td>{mileage}</td>
                     <td className='center' onClick={() => {
-                        this.setCurrentlyEditing(car.name)
+                        this.setCurrentlyEditing(device.name)
                     }}>
                         <FontAwesomeIcon className='table-icon' icon={faPencilAlt}/>
                         <span className='update-buttons'>Edit</span>
@@ -128,9 +128,9 @@ class App extends Component {
         })
     }
 
-    getCarByName = (name) => {
-        return this.state.cars.find(car => {
-            return car.name === name;
+    getDeviceByName = (name) => {
+        return this.state.devices.find(device => {
+            return device.name === name;
         })
     };
 
@@ -138,9 +138,9 @@ class App extends Component {
         const currentlyEditing = this.state.currentlyEditing;
 
         if (currentlyEditing) {
-            const car = this.getCarByName(currentlyEditing);
+            const device = this.getDeviceByName(currentlyEditing);
             return (
-                <DeviceView car={car} goBack={() => this.setCurrentlyEditing(null)} update={this.updateCar}/>
+                <DeviceView device={device} goBack={() => this.setCurrentlyEditing(null)} update={this.updateDevice}/>
             )
         }
         return (

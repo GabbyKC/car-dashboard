@@ -2,11 +2,13 @@ import React, {Component} from 'react';
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import {faPencilAlt, faTrash, faPlus} from "@fortawesome/free-solid-svg-icons";
 import DeviceView from "./DeviceView";
+import Modal from 'react-awesome-modal';
 import './App.css';
 
 class App extends Component {
     state = {
         currentlyEditing: null,
+        modalVisible: false,
         devices: [
             {
                 "name": 1,
@@ -100,7 +102,6 @@ class App extends Component {
         })
     };
 
-
     renderTableData() {
         return this.state.devices.map((device, index) => {
             const {name, deviceID, HWKey, charge, mileage, GPS} = device;
@@ -119,7 +120,7 @@ class App extends Component {
                         <FontAwesomeIcon className='table-icon' icon={faPencilAlt}/>
                         <span className='update-buttons'>Edit</span>
                     </td>
-                    <td onClick={this.deleteDevice} className='center'>
+                    <td onClick={() => this.openModal()} className='center'>
                         <FontAwesomeIcon className='table-icon' icon={faTrash}/>
                         <span className='update-buttons'>Delete</span>
                     </td>
@@ -133,6 +134,18 @@ class App extends Component {
             return device.name === name;
         })
     };
+
+    openModal() {
+        this.setState({
+            modalVisible: true
+        });
+    };
+
+    closeModal() {
+        this.setState({
+            modalVisible: false
+        });
+    }
 
     render() {
         const currentlyEditing = this.state.currentlyEditing;
@@ -166,6 +179,14 @@ class App extends Component {
                     {this.renderTableData()}
                     </tbody>
                 </table>
+
+                <Modal visible={this.state.modalVisible} width="340" height="110" onClickAway={() => this.closeModal()}>
+                    <div className='modal-contents'>
+                        <p className='modal-text'>Are you sure you want to delete this device?</p>
+                        <button  className='cancel-button' onClick={() => this.closeModal()}>Cancel</button>
+                        <button className='delete-button' >Delete</button>
+                    </div>
+                </Modal>
             </div>
         );
     }

@@ -238,3 +238,30 @@ input:checked + .slider:before {
 input[type=range] {
     cursor: pointer;
 }
+
+/*Modal Styles */
+.modal-contents {
+    font-size: 12px;
+}
+
+.modal-contents button {
+    width: 80px;
+    padding: 3px;
+}
+
+.modal-text {
+    text-align: center;
+    padding: 10px 0;
+}
+
+.cancel-button {
+    margin-left: 80px;
+    background-color: #efefef;
+    border-color: #efefef;
+}
+
+.delete-button {
+    margin-left: 20px;
+    background-color: #85ef78;
+    border-color: #85ef78;
+}

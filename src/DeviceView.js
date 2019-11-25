@@ -8,7 +8,7 @@ class DeviceView extends Component {
 
         return (
             <section className='dashboard-wrapper device-view'>
-                <div onClick={() =>  {this.props.goBack()}}>
+                <div onClick={() => {this.props.goBack()}}>
                     <FontAwesomeIcon className='back-arrow' icon={faChevronCircleLeft}/>
                 </div>
                 <div className='left-menu'>
@@ -98,7 +98,7 @@ class DeviceView extends Component {
                     </div>
 
                     <div className='right-menu-bottom'>
-                        <div><span className='bottom-heading'>Charge</span>
+                        <div className='input-slider'><span className='bottom-heading'>Charge</span>
                             <input name="charge" type="range" min="0" max="100" onChange={(e) => this.props.update(device.name, e)} value={device.charge}/> {device.charge} %
                         </div>
                         <div className='bottom-menu-item'><span className='bottom-heading'>Mileage</span>

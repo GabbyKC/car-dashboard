@@ -1,11 +1,11 @@
 [
   {
     "name": 1,
-    "deviceID": "12345678",
-    "HWKey": "98765432",
+    "deviceID": "88564724",
+    "HWKey": "17232888",
     "charge": 80,
-    "mileage": 4000,
-    "distance": 23,
+    "mileage": 1302,
+    "distance": 12.3,
     "immobilizer": true,
     "keyInHolder": true,
     "doors": true,
@@ -13,14 +13,15 @@
     "handbrake": true,
     "GPS": true,
     "ignition": true,
-    "LTE": false
+    "LTE": false,
+    "location": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2427.636431985886!2d13.41102065166224!3d52.52191837971555!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47a84e1edb11286f%3A0x30fc01c366e4166e!2sAlexanderplatz!5e0!3m2!1sen!2sde!4v1574620427024!5m2!1sen!2sde"
   },
   {
     "name": 2,
-    "deviceID": "12345677",
+    "deviceID": "32945641",
     "HWKey": "98765432",
-    "charge": 25,
-    "mileage": 250,
+    "charge": 65,
+    "mileage": 180,
     "distance": 10,
     "immobilizer": true,
     "keyInHolder": false,
@@ -29,14 +30,15 @@
     "handbrake": true,
     "GPS": false,
     "ignition": true,
-    "LTE": false
+    "LTE": false,
+    "location": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2427.9483064299807!2d13.375510051662115!3d52.516274579714484!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47a851c655f20989%3A0x26bbfb4e84674c63!2sBrandenburg%20Gate!5e0!3m2!1sen!2sde!4v1574626587136!5m2!1sen!2sde"
   },
   {
     "name": 3,
-    "deviceID": "12345677",
-    "HWKey": "98765432",
-    "charge": 25,
-    "mileage": 250,
+    "deviceID": "54345813",
+    "HWKey": "37491837",
+    "charge": 12,
+    "mileage": 2650,
     "distance": 10,
     "immobilizer": true,
     "keyInHolder": false,
@@ -45,14 +47,15 @@
     "handbrake": true,
     "GPS": false,
     "ignition": true,
-    "LTE": false
+    "LTE": false,
+    "location": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2427.636431985886!2d13.41102065166224!3d52.52191837971555!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47a84e1edb11286f%3A0x30fc01c366e4166e!2sAlexanderplatz!5e0!3m2!1sen!2sde!4v1574620427024!5m2!1sen!2sde"
   },
   {
     "name": 4,
-    "deviceID": "12345677",
-    "HWKey": "98765432",
+    "deviceID": "32281937",
+    "HWKey": "19476442",
     "charge": 25,
-    "mileage": 250,
+    "mileage": 10000,
     "distance": 10,
     "immobilizer": true,
     "keyInHolder": false,
@@ -61,6 +64,7 @@
     "handbrake": true,
     "GPS": true,
     "ignition": true,
-    "LTE": false
+    "LTE": false,
+    "location": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2427.9483064299807!2d13.375510051662115!3d52.516274579714484!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47a851c655f20989%3A0x26bbfb4e84674c63!2sBrandenburg%20Gate!5e0!3m2!1sen!2sde!4v1574626587136!5m2!1sen!2sde"
   }
 ]

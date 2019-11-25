@@ -98,14 +98,14 @@ class DeviceView extends Component {
                     </div>
 
                     <div className='right-menu-bottom'>
-                        <div className='bottom-menu-item'><span className='bottom-heading'>Charge</span>
-                            <input name="charge" type="range" min="0" max="100" onChange={(e) => this.props.update(device.name, e)} value={device.charge}/> {device.charge}%
+                        <div><span className='bottom-heading'>Charge</span>
+                            <input name="charge" type="range" min="0" max="100" onChange={(e) => this.props.update(device.name, e)} value={device.charge}/> {device.charge} %
                         </div>
                         <div className='bottom-menu-item'><span className='bottom-heading'>Mileage</span>
-                            <input name="mileage" type="text" onChange={(e) => this.props.update(device.name, e)} value={device.mileage}/> km
+                            <input className='custom-size' name="mileage" type="text" onChange={(e) => this.props.update(device.name, e)} value={device.mileage}/> km
                         </div>
                         <div className='bottom-menu-item'><span className='bottom-heading'>Distance</span>
-                            <input name="distance" type="number" onChange={(e) => this.props.update(device.name, e)} value={device.distance}/> km
+                            <input className='custom-size' name="distance" type="number" onChange={(e) => this.props.update(device.name, e)} value={device.distance}/> km
                         </div>
                     </div>
                 </div>
